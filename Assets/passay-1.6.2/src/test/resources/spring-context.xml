@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:c="http://www.springframework.org/schema/c"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://schema.spring.io/beans/spring-beans.xsd">
+
+  <bean id="dictionary" class="org.passay.dictionary.WordListDictionary">
+    <constructor-arg>
+      <bean class="org.passay.dictionary.FileWordList">
+        <constructor-arg>
+          <bean class="java.io.RandomAccessFile">
+            <constructor-arg value="src/test/resources/web2.sort"/>
+            <constructor-arg value="r"/>
+          </bean>
+        </constructor-arg>
+      </bean>
+    </constructor-arg>
+  </bean>
+
+  <bean id="alphaRule" class="org.passay.CharacterRule"
+    c:data="#{T(org.passay.EnglishCharacterData).Alphabetical}"
+    c:num="3" />
+  <bean id="digitRule" class="org.passay.CharacterRule"
+    c:data="#{T(org.passay.EnglishCharacterData).Digit}"
+    c:num="1" />
+  <bean id="charRule" class="org.passay.CharacterCharacteristicsRule"
+    p:numberOfCharacteristics="2">
+    <property name="rules">
+      <list>
+        <ref bean="alphaRule"/>
+        <ref bean="digitRule"/>
+      </list>
+    </property>
+  </bean>
+
+  <bean id="dictRule" class="org.passay.DictionarySubstringRule"
+    p:dictionary-ref="dictionary" />
+
+  <bean id="lenRule" class="org.passay.LengthRule"
+    p:minimumLength="5"/>
+
+  <bean id="qwertySeqRule" class="org.passay.IllegalSequenceRule"
+    c:data="#{T(org.passay.EnglishSequenceData).USQwerty}" />
+
+  <bean id="alphaSeqRule" class="org.passay.IllegalSequenceRule"
+    c:data="#{T(org.passay.EnglishSequenceData).Alphabetical}" />
+
+  <bean id="numSeqRule" class="org.passay.IllegalSequenceRule"
+    c:data="#{T(org.passay.EnglishSequenceData).Numerical}" />
+
+  <bean id="repeatRegexRule" class="org.passay.RepeatCharacterRegexRule"/>
+
+  <bean id="usernameRule" class="org.passay.UsernameRule"
+    p:ignoreCase="true"
+    p:matchBackwards="true"/>
+
+  <bean id="wsRule" class="org.passay.WhitespaceRule"/>
+ 
+</beans>

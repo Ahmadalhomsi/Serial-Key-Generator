@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suppressions PUBLIC
+    "-//Puppy Crawl//DTD Suppressions 1.1//EN"
+    "http://www.puppycrawl.com/dtds/suppressions_1_1.dtd">
+
+<suppressions>
+  <!-- nothing magic about test data -->
+  <suppress checks="MagicNumber"
+            files=".*Test\.java" />
+
+  <!-- tests need lots of parameters -->
+  <suppress checks="ParameterNumber"
+            files=".*Test\.java" />
+
+  <!-- tests can be longer than 300 lines -->
+  <suppress checks="MethodLength"
+            files=".*Test\.java" />
+</suppressions>

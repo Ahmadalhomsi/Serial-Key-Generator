@@ -1,0 +1,10 @@
+08/03/2022 3.4.1
+- CCE in MenuPainter under some rare circumstances by using third party controls.
+
+05/17/2021 V3.4.0
+- Modified default background alpha value
+- Added blend mode support for better results when a control background is set 
+- Modified look - reduced border radius, default button style
+
+11/30/2017 V3.0.0
+- First official release

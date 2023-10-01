@@ -1,0 +1,127 @@
+08/03/2022 2.9.20
+- CCE in MenuPainter under some rare circumstances by using third party controls.
+
+------------------------------------------------------------------------------- 
+
+09/29/2016 2.9.19
+- Added new style for disabled/focused button for proper foreground color.
+
+------------------------------------------------------------------------------- 
+
+04/25/2016 V2.9.18
+- Disabled text color for disabled default button does not appear.
+
+------------------------------------------------------------------------------- 
+
+06/26/2013 V2.9.17
+- Fixed IllegalArgumentException for TitledBorder on very large panels.
+- Added support for rootPane text (Synthetica 2.17.1 or above required).
+- Added support for internal frame colorizing.
+
+------------------------------------------------------------------------------- 
+
+02/06/2013 V2.9.16
+- Fixed ComboBox list entry size issue for null values.
+
+------------------------------------------------------------------------------- 
+
+08/20/2012 V2.9.15
+- Customizable focus/hover color.
+- Added JTabbedPane#setBackgroundAt(tabIndex) support.
+
+------------------------------------------------------------------------------- 
+
+05/21/2012 V2.9.14
+- Fixed NPE in ScrollPanePainter when scroll panel has no viewport or view.
+
+------------------------------------------------------------------------------- 
+
+04/25/2012 V2.9.13
+- Improved ButtonPainter for RTL support.
+- Fixed fraction exception for very small titled borders.
+
+------------------------------------------------------------------------------- 
+
+10/12/2011 V2.9.12
+- Added UI-property "ToolTip.background" support.
+
+------------------------------------------------------------------------------- 
+
+07/05/2011 V2.9.11
+- TabbedPanePainter removed JTabbedPane dependency in common paintTabbedPaneTab 
+  method for proper work in NetBeans plugin.
+- Changed ScrollBar.minimumThumbSize type to lowercase - dimension.   
+
+------------------------------------------------------------------------------- 
+
+03/04/2011 V2.9.10
+- Bugfix separator painter  
+
+------------------------------------------------------------------------------- 
+
+01/17/2011 V2.9.9
+- Increased window resize border to improve usability  
+
+------------------------------------------------------------------------------- 
+
+12/14/2010 V2.9.8
+- JProgressBar - NPE when border is set to null.
+
+------------------------------------------------------------------------------- 
+
+12/06/2010 V2.9.7
+- JProgressBar - custom CompoundBorder isn't properly painted.
+
+------------------------------------------------------------------------------- 
+
+10/13/2010 V2.9.6
+- A custom JTree background color doesn't fill the complete background area in a scroll panel.
+
+------------------------------------------------------------------------------- 
+
+08/20/2010 V2.9.5
+- TableCellEditor update.
+- Added support for client property "Synthetica.paintFocus".
+- Bugfix: DefaultComboListCellRenderer paints background in conjunction with SyntheticaComboBoxUI.  
+
+------------------------------------------------------------------------------- 
+
+06/10/2010 V2.9.4
+- Added AbstractButton#paintFocus() to button painters. 
+
+------------------------------------------------------------------------------- 
+
+06/02/2010 V2.9.3
+- CheckBoxIconPainter slightly modified.
+
+------------------------------------------------------------------------------- 
+
+05/31/2010 V2.9.2
+- LogoRenderer isn't painted.
+- Added default property for checkBox and radioButton not to emulate pressed 
+  state because already supported by theme.
+
+------------------------------------------------------------------------------- 
+
+01/01/2010 V2.9.1
+- Updated copyright and license because of company rebrand.
+
+------------------------------------------------------------------------------- 
+
+10/07/2009 V2.9.0
+- Rotate support for buttons and tabs
+- Added support to colorize TabbedPane tabs
+- Added support to handle multiple XML files
+- Removed SyntheticaAddons configuration from synth.xml 
+
+-------------------------------------------------------------------------------
+
+12/30/2008 V1.1.0
+- Improved scrollbar position for scrollpanes with titled border
+- Fixed tableHeader background painting bug
+- Fixed NPE for progressBars on OSX 10.4 and -Dapple.awt.graphics.UseQuartz=true
+
+-------------------------------------------------------------------------------
+
+11/10/2008 V1.0.0
+- First official release of the Simple2D LAF.
